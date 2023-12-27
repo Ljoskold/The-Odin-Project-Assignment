@@ -20,11 +20,28 @@ header {
     
 }
 .navbar a {
-    display: inline;
+    display: inline-block;
+    position: relative;
     text-decoration: none;
     color: #F9FAEB;
     font-size: 24px;
     padding: 10px 30px;
+}
+.navbar a::after {
+    content: "";
+    position: absolute;
+    text-decoration: none;
+    left: 23%;
+    bottom: 0;
+    width: 60%;
+    height: 3px;
+    background: darkslategrey;
+    border: 40px;
+    transform: scale(0);
+}
+.navbar a:hover::after {
+    transform: scale(1);
+    transition: .3s;
 }
 .headercontainer{
     display: flex;
